@@ -41,18 +41,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="search"
-        options={{
-          title: 'Search',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons size={28}
-              name={focused ? 'search' : 'search-outline'}
-              color={"#159636"}
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="add-listing"
         options={{
           tabBarIcon: ({ color, focused }) => (
@@ -63,34 +51,15 @@ export default function TabLayout() {
           ),
         }}
       />
-          <Tabs.Screen
-            name="profile/index"
-            options={{
-              title: 'Profile',
-              tabBarIcon: ({ color, focused }) => (
-                <Ionicons size={28}
-                  name={focused ? 'person' : 'person-outline'}
-                  color={"#159636"}
-                />
-              ),
-            }}
-          />
-          <Tabs.Screen
-            name="profile/[id]"
-            options={{
-              title: 'Profile',
-              href: null,
-            }}
-          />
 
       <Tabs.Screen
-        name="settings"
+        name="user-settings"
         options={{
           title: 'Settings',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons size={28}
-              name={focused ? 'settings' : 'settings-outline'}
-              color={"#159636"}
+            name={focused ? 'person' : 'person-outline'}
+            color={"#159636"}
             />
           ),
         }}
