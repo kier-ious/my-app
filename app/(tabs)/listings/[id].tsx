@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, View, Text, StyleSheet, Image } from 'react-native';
-import { Link } from 'expo-router';
+import { Link, LinkProps } from 'expo-router';
 
 const salesData = [
   { id: '1', title: 'Yard Sale 1', image: require('@/assets/images/sale1.png') },
@@ -19,7 +19,7 @@ export default function HomeScreen() {
         <Text style={styles.saleTitle}>{item.title}</Text>
       </Link>
       <Link href={`/profile/${item.id}`} style={styles.link}>
-        <Text style={styles.saleTitle}>Go to Profile</Text>
+      <Text style={styles.saleTitle}>Go to Profile</Text>
       </Link>
     </View>
   );
