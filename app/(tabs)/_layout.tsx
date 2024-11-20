@@ -2,13 +2,10 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
 import { HapticTab } from '@/components/HapticTab';
-// import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { Ionicons } from '@expo/vector-icons';
-import LogoutComponent from '@/components/LogoutComponent';
-
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -17,8 +14,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: true,
-        headerRight: () => <LogoutComponent/>,
+        headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
@@ -51,17 +47,34 @@ export default function TabLayout() {
           ),
         }}
       />
-
       <Tabs.Screen
-        name="user-settings"
+        name="userprofile/index"
         options={{
-          title: 'Settings',
+          title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons size={28}
             name={focused ? 'person' : 'person-outline'}
             color={"#159636"}
             />
           ),
+        }}
+      />
+      <Tabs.Screen
+        name="userprofile/changepassword"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="userprofile/mylistings"
+        options={{
+          href: null,
+        }}
+      />
+      <Tabs.Screen
+        name="userprofile/savedposts"
+        options={{
+          href: null,
         }}
       />
     </Tabs>

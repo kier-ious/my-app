@@ -34,10 +34,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: "#D9D9D9",
     borderRadius: 10,
-    shadowColor: "#000", // Shadow color
-    shadowOpacity: 0.5,  // Shadow transparency
-    shadowRadius: 4,     // How blurry the shadow is
-    shadowOffset: { width: 0, height: 6 }, // Shift the shadow down only
+    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
     elevation: 4,
     marginBottom: 20,
     marginVertical: 8,

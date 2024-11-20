@@ -32,11 +32,11 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
   return (
     <View
       style={{
-        flex: 1, // Take up the full screen
-        backgroundColor: "#FFFFFF", // White background
-        justifyContent: "center", // Center contents vertically
-        alignItems: "center", // Center contents horizontally
-        padding: 20, // Add padding for spacing
+        flex: 1,
+        backgroundColor: "#FFFFFF",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 20,
       }}
     >
       {/* Logo */}
@@ -83,7 +83,7 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
         <Pressable
           onPress={() => router.replace("/(tabs)/")}
           style={{
-            backgroundColor: "#159636", // Green color
+            backgroundColor: "#159636",
             borderRadius: 30,
             padding: 15,
             alignItems: "center",
