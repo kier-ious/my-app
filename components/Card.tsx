@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image, GestureResponderEvent } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Card({ title, description, image, onPress }) {
+// Define the type for props
+interface CardProps {
+  title: string;
+  description: string;
+  image: any; // Type for image can be `any` if you're passing different types of image sources
+  onPress: (event: GestureResponderEvent) => void;
+}
+
+const Card: React.FC<CardProps> = ({ title, description, image, onPress }) => {
   const [liked, setLiked] = useState(false);
 
   const toggleLike = () => {
@@ -74,3 +82,5 @@ const styles = StyleSheet.create({
     color: "#777",
   },
 });
+
+export default Card;

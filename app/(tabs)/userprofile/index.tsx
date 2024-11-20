@@ -29,7 +29,7 @@ export default function SettingsScreen() {
         {/* Gear Icon */}
         <Ionicons name="settings-outline" size={24} color="white" />
         {/* Header Text */}
-        <Text style={styles.headerTitle}>Profile</Text>
+        <Text style={styles.headerTitle}>Settings</Text>
       </View>
 
       <View style={styles.card}>
@@ -78,23 +78,23 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',  // White background for the content area
+    backgroundColor: 'white',
   },
   header: {
-    height: '35%',  // Green header takes up 30% of the screen
-    backgroundColor: '#159636',  // Green color
-    flexDirection: 'row',  // Align items horizontally
-    alignItems: 'center',  // Vertically center items in the header
-    paddingBottom: 100,
-    position: 'absolute',  // Position this element absolutely at the top
-    width: '100%',  // Full width
-    paddingLeft: 35,  // Adds space to the left side
+    height: '35%',
+    backgroundColor: '#159636',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingBottom: 120,
+    position: 'absolute',
+    width: '100%',
+    paddingLeft: 35,
   },
   headerTitle: {
     fontSize: 36,
     fontWeight: 'bold',
     color: 'white',
-    marginLeft: 10,  // Adds spacing between the icon and the text
+    marginLeft: 10,
   },
   profileSection: {
     flexDirection: 'row',
@@ -118,11 +118,11 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: 'white',
     borderRadius: 20,
-    padding: 40,
-    marginTop: 150,  // Adjust to push the card down a bit (the height of the header)
-    marginHorizontal: 35,  // Horizontal padding/margin for the card
+    padding: 30,
+    marginTop: 150,
+    marginHorizontal: 35,
     boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)',
-    elevation: 4,  // Shadow for Android
+    elevation: 4,
   },
   menuItem: {
     flexDirection: 'row',
@@ -139,5 +139,11 @@ const styles = StyleSheet.create({
   },
   chevron: {
     marginLeft: 'auto',
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#333',
+    marginBottom: 10,
   },
 });
